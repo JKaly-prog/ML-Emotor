@@ -1,0 +1,30 @@
+# --- CORE ---
+numpy==1.26.4
+pandas==2.2.1
+scipy==1.12.0
+
+# --- MACHINE LEARNING ---
+scikit-learn==1.3.2
+xgboost==2.0.3
+
+# --- VISUALIZACIÓN ---
+matplotlib==3.8.3
+seaborn==0.13.2
+
+# --- FEATURE ENGINEERING ---
+tsfresh==0.20.2         # Automatic feature extraction for electrical series
+pywavelets==1.5.0       # Wavelet analysis (widely used in engine failures)
+
+# --- UTILIDADES ---
+tqdm==4.66.2
+
+# --- GCP ---
+google-cloud-storage==2.15.0
+google-cloud-bigquery==3.14.0
+google-cloud-core
+
+# --- STREAMLIT ---
+streamlit==1.39.0
+
+# --- JUPYTER ---
+jupyterlab==4.1.0

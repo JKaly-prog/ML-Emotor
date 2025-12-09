@@ -1,0 +1,55 @@
+# -----------------------------
+# Python cache and compiled files
+# -----------------------------
+__pycache__/
+*.py[cod]
+*.pyo
+
+# -----------------------------
+# Virtual environments
+# -----------------------------
+.venv/
+env/
+venv/
+
+# -----------------------------
+# Jupyter Notebook checkpoints
+# -----------------------------
+.ipynb_checkpoints/
+*.ipynb-kernel
+*.json
+
+# -----------------------------
+# Data files (raw or large datasets)
+# Put your datasets in /data/ but do NOT commit them
+# -----------------------------
+data/
+*.csv
+*.xlsx
+*.parquet
+*.json
+
+# -----------------------------
+# Model binaries (weights, pickles)
+# -----------------------------
+*.pkl
+*.joblib
+models/
+
+# -----------------------------
+# Logs and temporary files
+# -----------------------------
+logs/
+*.log
+tmp/
+
+# -----------------------------
+# Experiment tracking
+# -----------------------------
+mlruns/
+runs/
+
+# -----------------------------
+# VS Code settings
+# -----------------------------
+.vscode/

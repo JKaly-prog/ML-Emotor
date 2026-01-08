@@ -1,55 +1,76 @@
-# -----------------------------
+# ==============================================================================
+# PYTHON & REPOSITORY CONFIGURATION
+# ==============================================================================
+
 # Python cache and compiled files
-# -----------------------------
 __pycache__/
 *.py[cod]
 *.pyo
+*.pyd
 
-# -----------------------------
 # Virtual environments
-# -----------------------------
 .venv/
 env/
 venv/
+ENV/
+bin/
+lib/
 
-# -----------------------------
+# VS Code settings
+.vscode/
+.history/
+
+# ==============================================================================
+# JUPYTER NOTEBOOKS & INTEGRATIONS
+# ==============================================================================
+
 # Jupyter Notebook checkpoints
-# -----------------------------
 .ipynb_checkpoints/
 *.ipynb-kernel
-*.json
 
-# -----------------------------
-# Data files (raw or large datasets)
-# Put your datasets in /data/ but do NOT commit them
-# -----------------------------
+# Block only notebook metadata settings, not general config JSONs
+.jupyter_ct-settings.json
+
+# ==============================================================================
+# DATA & MODELS (Storage and Heavy Files)
+# ==============================================================================
+
+# Ignore entire data directories
 data/
+temp/
+tmp/
+
+# Heavy data formats (Do NOT push to GitHub)
 *.csv
 *.xlsx
 *.parquet
-*.json
+*.feather
+*.h5
 
-# -----------------------------
+# Note: *.json is NOT globally blocked to allow GCP Service Account keys.
+# Move large JSON datasets to the /data/ folder to keep them ignored.
+
 # Model binaries (weights, pickles)
-# -----------------------------
 *.pkl
 *.joblib
 models/
 
-# -----------------------------
-# Logs and temporary files
-# -----------------------------
+# ==============================================================================
+# LOGS & EXPERIMENT TRACKING
+# ==============================================================================
+
 logs/
 *.log
-tmp/
-
-# -----------------------------
-# Experiment tracking
-# -----------------------------
 mlruns/
 runs/
+.comet_ml/
 
-# -----------------------------
-# VS Code settings
-# -----------------------------
-.vscode/
+# ==============================================================================
+# CLOUD & SECURITY (CRITICAL)
+# ==============================================================================
+
+# Prevent uploading GCP Service Account keys or local secrets
+*.json_key
+secrets/
+.env
+.gcp_credentials
